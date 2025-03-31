@@ -5,7 +5,7 @@ import Card from "../../components/Card";
 
 export default function Home() {
 
-  const mobile = useMediaQuery('(max-width: 600px)')
+  const mobile = useMediaQuery('(max-width: 800px)')
   
   const data = [{
         image: "/images/icon-sedans.svg", title:"Sedans", description:"Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.", color:'#E28625'
@@ -21,9 +21,10 @@ export default function Home() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '98vh',
+      height: mobile ? 'auto' : '98vh',
       flexDirection: mobile ? 'column' : 'row',
     }}>
+      
       {data.map((card) => {
         return <Card image={card.image} title={card.title} description={card.description} color={card.color} key={card.title}/>
 

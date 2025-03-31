@@ -19,6 +19,7 @@ const Card = ({image, title, description, color}: CardProps) => {
         width: '18.75rem',
         backgroundColor:color ,
         padding: '3rem',
+        
     }}>
         <Image 
             src={image}
